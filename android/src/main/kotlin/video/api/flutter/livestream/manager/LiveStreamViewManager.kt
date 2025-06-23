@@ -146,6 +146,7 @@ class LiveStreamViewManager(
     fun dispose() {
         stopStream()
         streamer.stopPreview()
+        streamer.release()
         flutterTexture.release()
     }
 
